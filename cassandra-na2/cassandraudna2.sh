@@ -24,7 +24,7 @@ chown -R cassandra:cassandra /mnt2/
 sed -i 's/192.168.10.10,192.168.11.10,192.168.12.10/10.2.9.218,10.2.9.59,10.2.9.190/g' /etc/cassandra/cassandra.yaml;
 sed -i 's/PrfmCluster/NA2Cluster/g' /etc/cassandra/cassandra.yaml;
 sed -i 's/us-east-m4/dc1/g' /etc/cassandra/cassandra-rackdc.properties;
-sed -i 's/rack1/1d/g' /etc/cassandra/cassandra-rackdc.properties;
+sed -i 's/rack1/1a/g' /etc/cassandra/cassandra-rackdc.properties;
 sed -i 's/Ec2Snitch/GossipingPropertyFileSnitch/g' /etc/cassandra/cassandra.yaml;
 ip=`/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'`
 sed -i 's/192.168.10.10/'"$ip"'/g' /etc/cassandra/cassandra.yaml;
